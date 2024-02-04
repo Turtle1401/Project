@@ -1,0 +1,26 @@
+body{
+  font-family: Arial;
+  color: rgb(33, 33, 33);
+  margin : 0;
+}
+p{
+  margin : 0;
+}
+button{
+  cursor : pointer;
+}
+select{
+  cursor: pointer;
+}
+select{
+  color : rgb(33, 33, 33);
+  background-color: rgb(240, 240, 240);
+  border : 1px solid  rgb(213, 217, 217);
+  border-radius: 5px;
+  padding : 3px 5px;
+  box-shadow: 0 2px 5px rgba(213, 217, 217, 0.5);
+}
+select:focus,
+input:focus{
+  outline: 2px solid rgb(255, 153, 0);
+}

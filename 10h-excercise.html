@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      
+      .body{
+        font-family: Arial;
+      }
+
+      .decor-input{
+        font-size : 15px;
+        padding : 10px;
+        cursor : pointer;
+      }
+      .decor-calculate{
+        border : none;
+        background-color: green;
+        color : white;
+        font-size : 17px;
+        padding : 10px;
+        cursor : pointer;
+      }
+      .decor-error{
+        color : red;
+      }
+
+    </style>
+  </head>
+  <body>
+    <input placeholder="Cost of order"
+     class="decor-input handle-input"
+     onkeydown="EnterButton(event);" > 
+    <button class="decor-calculate handle-calculate"
+    onclick="calculation();"
+    >Calculate</button>
+
+    <p class="total-cost"></p>
+
+    <p class=" decor-error  error-message"></p>
+    <script>
+
+      function EnterButton (event){
+        if(event.key === 'Enter'){
+          calculation();
+        }
+      }
+      function calculation(){
+        const inputElement = document.querySelector('.handle-input');
+        let cost = Number(inputElement.value);
+        document.querySelector('.total-cost').innerHTML='';
+
+        document.querySelector('.error-message').innerHTML='';
+        if(cost < 0){
+          document.querySelector('.error-message').innerHTML = 'Error: cost cannot be less than $0';
+          return;
+        }else if(cost < 40){
+          cost += 10;
+        }
+        document.querySelector('.total-cost').innerHTML = `$${cost}`;
+      }
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,132 @@
+<html>
+  <head>
+    <title>Gmail-IOS</title>
+    <style>
+      div{
+        font-family: Arial; 
+      }
+      
+      .flex-box{
+        border-width : 1px;
+        border-style: solid;
+        border-color :white;
+        border-radius: 4px;
+        box-shadow: 1px 1px 10px rgb(192,192,192);
+        margin : 0;
+        width : 500px;
+        padding-top : 10px;
+        padding-bottom: 10px;
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+      .total-letter{
+        color : rgb(112, 112, 112);
+        margin-top : 10px;
+        margin-bottom: 20px;
+        font-size: 13px;
+      }
+      .flex{
+        display: flex;
+        flex-direction: row;
+        margin-bottom : 25px;
+      }
+      .flame-picture{
+        margin-right : 10px;
+      }
+      .profile-picture{
+        height : 60px;
+        width :60px;
+        border-radius: 30px;
+        object-fit: cover;
+      }
+      .email-content{
+        flex : 1;
+      }
+      .name-and-time{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .name{
+        font-weight: bold;
+        font-size: 20px;
+        margin-bottom: 3px;
+      }
+      .time{
+        color: rgb(120, 120, 120);
+        font-size: 14px;
+      }
+      .Title{
+        font-weight: bold;
+        margin-bottom: 3px;
+      }
+      .message{
+        color: rgb(120, 120, 120);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flex-box">
+      <div class="total-letter">ALL INBOXES</div>
+      <div class="flex">
+        <div class="flame-picture">
+          <img src="images/cat.jpg" class="profile-picture">
+        </div>
+        <div class="email-content">
+          <div class="name-and-time">
+            <div class="name">Chewy Promotions</div>
+            <div class="time">4:58 PM</div>
+          </div>
+          <div class="Title">
+            Biggest sales of the year!
+          </div>
+          <div class="message">
+            Hey there! We're writing to tell you about our...
+          </div>
+        </div>
+      </div>
+       
+
+      <div class="flex">
+        <div class="flame-picture">
+          <img src="images/dog.jpg" class="profile-picture">
+        </div>
+        <div class="email-content">
+          <div class="name-and-time">
+            <div class="name">
+              Best Guy
+            </div>
+            <div class="time">
+              12:32 PM
+            </div>
+          </div>
+          <div class="Title">
+            Your Best Buy eReceipt
+          </div>
+          <div class="message">
+            Thank you for shopping at Best Buy, here is...
+          </div>
+        </div>
+      </div>
+
+      <div class="flex">
+        <div class="flame-picture">
+          <img src="images/cat2.jpg" class="profile-picture">
+        </div>
+        <div class="email-content">
+          <div class="name-and-time">
+            <div class="name">Netflix</div>
+            <div class="time">9:00 AM</div>
+          </div>
+          <div class="Title">
+            Here's what's coming soon to Netflix
+          </div>
+          <div class="message">
+            Brand new movies and shows, old favorites...
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

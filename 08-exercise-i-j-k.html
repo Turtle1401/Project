@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+  </head>
+  <body>
+    <button onclick="
+    letplayerMove('heads');
+    ">heads</button>
+
+    <button onclick="
+    letplayerMove('tails');
+
+    ">tails</button>
+
+    <button onclick="
+    score.wins=0;
+    score.loses=0;
+    localStorage.removeItem('score');
+    ">Reset</button>
+    <script>
+      let score = JSON.parse(localStorage.getItem('score'));
+      if (score === null){
+        score ={
+          wins :0,
+          loses :0
+        }
+      };
+      
+      function letplayerMove (playerMove){
+        const ComputerMove = LetComputerMove();
+        let result ='';
+        if(playerMove === 'heads'){
+          if(ComputerMove === 'heads'){
+            result ='You Win';
+          }else if(ComputerMove ==='tails'){
+            result ='You Lose';
+          }
+        }if(playerMove === 'tails'){
+          if(ComputerMove === 'heads'){
+            result = 'You Lose';
+          }if(ComputerMove === 'tails'){
+            result ='You Win'
+          }
+        }
+
+        if(result ==='You Win'){
+          score.wins +=1;
+        }else if(result === 'You Lose'){
+          score.loses +=1;
+        }
+        localStorage.setItem('score',JSON.stringify(score));
+        
+        alert(`You pick ${playerMove} , The computer Pick ${ComputerMove}.${result}
+Wins:${score.wins}, loses: ${score.loses}`);
+      }
+      
+     
+      function LetComputerMove (){
+        let computerMove = '';
+        const Random = Math.random();
+        if(Random <=0.5){
+          computerMove ='heads';
+        }else{
+          computerMove ='tails';
+        }
+        return computerMove;
+      } 
+
+    </script>
+  </body>
+</html>

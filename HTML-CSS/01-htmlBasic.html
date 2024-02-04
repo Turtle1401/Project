@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>  
+      .sub-button{
+        background-color: rgb(204, 0, 0);
+        color :white;
+        border :none;
+        padding-top : 10px;
+        padding-bottom : 10px;
+        padding-left : 16px;
+        padding-right : 16px;
+        border-radius: 5px;
+        cursor :pointer;
+        transition :  opacity 0.15s;
+        /* 
+        how transition between different styles when hovering over
+        */
+        vertical-align : top;
+        /*
+        align to the top
+        */
+      }
+      .join-button{
+        background-color: rgb(255, 255, 255);
+        border-color : rgb(41,118,211);
+        border-style: solid ;
+        border-width : 1px;
+        color: rgb(41,118,211);
+        padding-top : 9px;
+        padding-bottom : 9px;
+        padding-left  : 16px;
+        padding-right : 16px;
+        border-radius : 2px;
+        margin-left : 8px;
+        cursor :pointer;
+        transition : background-color 0.15s ,
+                     color 0.15s;
+      }
+      .tweet-button{
+        background-color: rgb(29, 155, 240);
+        color : rgb(255, 255, 255);
+        border :none ;
+        font-size : 15px;
+        font-family: arial;
+        font-weight: bold;
+        padding-top : 10px;
+        padding-bottom : 10px;
+        padding-left : 16px;
+        padding-right : 16px;
+        border-radius: 60px;
+        margin-left : 8px;
+        cursor:pointer;
+        transition: box-shadow 0,15s;
+      }
+
+      .sub-button:hover{
+        opacity: 0.7 ;
+        /*
+        opacity is used to fade out an element
+        1 is basic 
+        The smaller is one, the lighter it is
+        */
+      }
+      .sub-button:active{
+        opacity: 0.3;
+      }
+      .join-button:hover{
+        background-color: rgb(41,118,211) ;
+        color: white;
+      }
+      .join-button:active{
+        opacity: 0.7;
+      }
+
+      .tweet-button:hover{
+        box-shadow : 5px 5px 10px rgba(0,0,0,0.15);
+        /*1 horizontal position 10px to the right
+          2 vertical position   10px downs 
+          3 blurred
+          4 color*/
+      }
+    </style>
+  </head>
+  <body>
+    <a href="https://www.youtube.com/"
+    target="_blank" 
+    >Link to youtube</a>
+    <br>
+    <button class="sub-button">SUBSCRIBE</button>
+    <button class="join-button">JOIN</button>
+    <button class="tweet-button">Tweet</button>
+    <script>
+      // target is opens this link in a new tab
+    </script>
+  </body>
+</html>

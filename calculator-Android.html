@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+  <head>
+   <title>Calculate of Android</title>
+    <style>
+      body{
+        font-family: Arial;
+        background-color: dimgray;
+      }
+      .decor-display{
+        height : 50px;
+        width : 270px;
+        background-color: seashell;
+        font-size : 20px;
+        font-weight: bold;
+      }
+
+      .decor-button{
+        height : 50px;
+        width : 50px;
+        font-size : 20px;
+        cursor : pointer;
+      }
+
+      .color-1{
+        background-color:darkcyan ;
+        color : white;
+      }
+
+      .color-2{
+        background-color: orange;
+        color: white;
+      }
+      .color-3{
+        background-color: gray;
+        color: white;;
+      }
+
+      .eval-button{
+        width : 105px;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <p class="js-display decor-display"></p>
+
+    <p>
+      <button class="decor-button color-3">MU</button>
+      <button class="decor-button color-3">%</button>
+      <button class="decor-button color-3">??</button>
+      <button class="decor-button color-3">>></button>
+      <button class="decor-button color-3">GT</button>
+    </p>
+
+    <p>
+      <button class="decor-button color-3">MC</button>
+      <button class="decor-button color-3">MR</button>
+      <button class="decor-button color-3">M-</button>
+      <button class="decor-button color-3">M+</button>
+      <button class="decor-button color-3"
+      onclick="math(' / ');">/</button>
+
+    </p>
+
+    <p>
+      <button class="decor-button color-3">+/-</button>
+      <button class="decor-button color-1"
+      onclick="math('7');">7</button>
+      <button class="decor-button color-1"
+      onclick="math('8');">8</button>
+      <button class="decor-button color-1"
+      onclick="math('9');">9</button>
+      <button class="decor-button color-3"
+      onclick="math(' * ');">X</button>
+    </p>
+
+    <p>
+      <button class="decor-button color-2"
+      onclick="
+      calculation = '';
+      display();
+      localStorage.setItem('Save',calculation);">C</button>
+
+      <button class="decor-button color-1"
+      onclick="math('4');">4</button>
+      <button class="decor-button color-1"
+      onclick="math('5');">5</button>
+      <button class="decor-button color-1"
+      onclick="math('6');">6</button>
+      <button class="decor-button color-3"
+      onclick="math(' - ');">-</button>
+    </p>
+    
+    <p>
+      <button class="decor-button color-2"
+      onclick="
+      calculation = '';
+      display();
+      localStorage.setItem('Save',calculation);">AC</button>
+
+
+      <button class="decor-button color-1"
+      onclick="math('1');">1</button>
+      <button class="decor-button color-1"
+      onclick="math('2');">2</button>
+      <button class="decor-button color-1"
+      onclick="math('3');">3</button>
+      <button class="decor-button color-3"
+      onclick="math(' + ');">+</button>
+    </p>
+    
+    
+    <p>
+      <button class="decor-button color-1"
+      onclick="math('0');">0</button>
+      <button class="decor-button color-1"
+      onclick="math('00');">00</button>
+      <button class="decor-button color-1"
+      onclick="math('.');">.</button>
+
+      <button class="decor-button color-3 eval-button"
+      onclick="
+      calculation = eval(calculation);
+      display();
+      localStorage.setItem('Save',calculation);">=</button>
+
+     
+    </p>
+
+    
+    <script>
+      let calculation = localStorage.getItem('Save') || '';
+
+      function math (number){
+        calculation += number;
+        display();
+        localStorage.setItem('Save',calculation);
+      }
+
+      function display(){
+        document.querySelector('.js-display').innerHTML = calculation;
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      div{
+        font-family: arial;
+      }
+      .sidebar1{
+        position: fixed;
+        top : 0;
+        bottom: 0;
+        left : 0;
+        padding-top: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+        background-color: rgb(32, 32, 32);
+      }
+      .flame-picture{
+        margin-bottom: 10px;
+      }
+      .profile-picture{
+        height : 50px;
+        width : 50px;
+        border-radius: 25px;;
+        object-fit: cover;
+        display : flex;
+        flex-direction: row;
+      }
+      .sidebar2{
+        position: fixed;
+        left : 70px;
+        top : 0;
+        bottom : 0;
+        width : 150px;
+        background-color: rgb(51, 50, 50);
+        padding-top: 10px;
+      }
+      .header{
+        display : flex;
+        flex-direction: row;
+        align-items: center;
+      }
+      .info{
+        color : white;
+        font-size: 12px;
+        padding-left: 15px;
+      }
+      .add-button{
+        color : rgb(151, 148, 148);
+        padding-left : 80px;
+        font-size: 20px;
+      }
+      .function{
+        color : rgb(151, 148, 148);
+        line-height: 30px;
+        padding-left: 15px;
+        font-size: 13px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="sidebar1">
+      <div class="flame-picture">
+        <img src="images/cat.jpg" class="profile-picture">
+      </div>
+      <div class="flame-picture">
+        <img src="images/cat2.jpg" class="profile-picture">
+      </div>
+      <div class="flame-picture">
+        <img src="images/dog.jpg" class="profile-picture">
+      </div>
+    </div>
+
+    <div class="sidebar2">
+      <div class="flame-sidebar2">
+        <div class="header">
+          <div class="info">INFO</div>
+          <div class="add-button">+</div>
+        </div>
+        <div class="function"># new-videos</div>
+        <div class="function"># updates</div>
+        <div class="function"># faq</div>
+      </div>
+    </div>
+  </body>
+</html>

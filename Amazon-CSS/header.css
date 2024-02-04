@@ -1,0 +1,118 @@
+.amazon-header{
+  background-color: black;
+  height : 60px;
+  padding-left: 15px;
+  padding-right: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top :0;
+  right : 0;
+  bottom: 0;
+  left :0;
+}
+.header-link{
+  display : inline-block;
+  padding : 6px;
+  text-decoration: none;
+  border : 1px, solid , rgba(0,0,0);
+  border-radius: 2px;
+  cursor: pointer;
+}
+.header-link:hover{
+  border-width: 1px;
+  border-style: solid;
+  border-color: white;
+}
+.amazon-header-left{
+  width : 150px;
+}
+.logo-amazon{
+  width : 80px;
+  margin-top: 5px;
+}
+.logo-amazon-mobile{
+  display : none;
+}
+@media (max-width: 575px){
+  .logo-amazon{
+    display : none;
+  }
+  .logo-amazon-mobile {
+    display: block;
+    height: 35px;
+    margin-top: 5px;
+  }
+}
+.amazon-header-middle{
+  display: flex;
+  flex : 1;
+  max-width : 650px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.search-bar{
+  flex : 1;
+  width : 0;
+  border : none;
+  font-size: 16px;
+  height : 32px;
+  padding-left: 15px;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.search-button{
+  background-color: rgb(254, 189, 105);
+  flex-shrink: 0;
+  width : 45px;
+  height : 34px;
+  border: none;
+}
+.search-icon{
+  height : 22px;
+  margin-left: 2px;
+  margin-top: 3px;
+}
+.amazon-header-right{
+  display: flex;
+  flex-shrink: 0;
+  justify-content: end;
+  width : 180px;
+}
+.Return-text{
+  color : white;
+  display: block;
+  font-size: 13px;
+}
+.Order-text{
+  color : white;
+  display : block;
+  font-weight: bolder;
+  font-size: 15px;
+}
+.cart-link{
+  position: relative;
+  color : white;
+  align-items: center;
+  display: flex;
+}
+.cart-icon{
+
+  width : 50px;
+}
+.cart-quantity{
+  position: absolute;
+  color: rgb(240, 136, 4);
+  font-size: 16px;
+  top : 2px;
+  left : 25px;
+  align-items: center;
+}
+.cart-text{
+  font-size : 16px;
+  margin-top: 12px;
+  font-weight: bold;
+}

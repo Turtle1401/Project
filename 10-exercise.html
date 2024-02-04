@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .one{
+        background-color : rgb(255 , 216 , 20);
+        border :none;
+        font-size : 20px;
+        padding: 5px 40px;
+        border-radius : 50px;
+        cursor : pointer;
+      }
+      .two{
+        background-color : black;
+        color : white;
+        font-size : 18px;
+        font-weight : bolder;
+        padding : 5px 20px;
+        border-radius : 10px;
+        cursor :pointer;
+      }
+      .three{
+        background-color : rgb(230, 230 ,230);
+        padding : 8px 30px;
+        border : none;
+        font-size : 20px;
+        font-weight : bold;
+        cursor : pointer;
+      }
+      .js-game{
+        background-color: rgb(230, 230 ,230);
+        border :none;
+        font-size : 20px;
+        padding : 5px 20px;
+        margin-top: 20px;
+        border-radius : 10px;
+        cursor : pointer;
+      }
+      .is-toggled{
+        background-color: black;
+        color : white;
+        border :none;
+        font-size : 20px;
+        padding : 5px 20px;
+        margin-top: 20px;
+        border-radius : 10px;
+        cursor : pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="one">Add to Cart</button>
+    <button class="two">Resquest now</button>
+    <button class="three">Schedule for later</button>
+    <button class="js-button" onclick="Gamingbutton();">Test</button>
+    <BR>
+      <button
+       class= "js-game toggle-button"
+       onclick="Gamingbutton('.toggle-button');">Gaming</button>
+
+       <button 
+        class="js-game toggle-button2"
+        onclick="Gamingbutton('.toggle-button2');">Music</button>
+
+       <button
+        class="js-game toggle-button3"
+        onclick="Gamingbutton('.toggle-button3');">Tech</button>
+    <script>
+      const button = document.querySelector('.js-button');
+      console.log(button.classList.contains('js-button'));
+
+      function Gamingbutton (selector){
+        const buttonGame=document.querySelector(selector);
+        if(!buttonGame.classList.contains('is-toggled')){
+
+          turnOffPreviousButton();
+
+            buttonGame.classList.add('is-toggled');
+        }else{
+          buttonGame.classList.remove('is-toggled');
+        }
+      }
+
+      function turnOffPreviousButton (){
+        const previousButton = document.querySelector('.is-toggled');
+        if(previousButton){
+          previousButton.classList.remove('is-toggled');
+        }
+      }
+    </script>
+  </body>
+</html>

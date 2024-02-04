@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Dom</title>
+  </head>
+  <body>
+    <button>hello</button>
+    <button class="js-button">Hi </button>
+    <script>
+      console.log(document.querySelector('button').innerHTML);// the first button element from the page
+      document.querySelector('button').innerHTML ='CHANGED';
+      console.log(document.querySelector('button').innerHTML);
+      const buttonElement = document.querySelector('.js-button');
+      console.log(buttonElement);
+      /*
+      console.log(document.title);
+      document.title ='Changed';
+      console.log(document.body);
+      
+      console.log(document.body.innerHTML);
+      document.body.innerHTML ='<button> Good job! </button>' // replace all of the HTML inside the body with button <good job!>;
+      
+      /*
+      document.body.innerHTML ='hehe' // replace all of the HTML inside the body with  'hehe';
+      document.title ='Good job';
+      */
+      // innerHTML : give us the HTML inside the button (hello)
+      //(hi) 
+    </script>
+  </body>
+</html>

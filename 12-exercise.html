@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>App</title>
+  </head>
+  <body>
+    <button class="js-button" onclick="UpdateeeeButton();">START</button>
+
+    <button onclick="displayyy();">Add to cart</button>
+
+    <P class="display-cart"></P>
+
+    <button onclick="message++;
+    displayNotification();">
+    Add</button>
+    
+    <button onclick="if(message > 0){
+       message--;
+       if(message === 0){
+        stopdisplay();
+       }
+      }">Remove</button>
+    <script>
+      //A
+      const add = function(){
+        console.log(2+3);
+      };
+      add();
+      add();
+      //B
+      function runTwice(fun){
+        fun();
+        fun();
+      }
+      runTwice (function(){
+        console.log('12b');
+      })
+      runTwice(add);
+      //C
+      function updateButton(){
+        const button = document.querySelector('.js-button');
+          setTimeout(function() {
+            button.innerHTML = 'Finished!';
+          },1000);
+        }
+      //D
+      function UpdateeeeButton(){
+        const button = document.querySelector('.js-button');
+        button.innerHTML = 'Loading...';
+        setTimeout(function(){
+          button.innerHTML = 'Finished!';
+        },1000);
+      }
+      //E
+      function display(){
+        const add = document.querySelector('.display-cart');
+        add.innerHTML = 'Added';
+        setTimeout(function(){
+          add.innerHTML = '';
+        },2000)
+      }
+      //F
+      let timeOutID;
+      function displayyy(){
+        const add = document.querySelector('.display-cart');
+        add.innerHTML = 'Added';
+        clearTimeout(timeOutID);
+        
+        timeOutID = setTimeout(function(){
+          add.innerHTML = '';
+        },2000);
+      }
+      //G
+      /*
+      setInterval(function(){
+        if(document.title === 'App'){
+          document.title = '(2) New message';
+        }else{
+          document.title = 'App';
+        }
+      },1000);
+      */
+      //H
+      /*
+      let message = 2;
+      setInterval(function(){
+        if(document.title === 'App'){
+          document.title = `(${message}) New message`;
+        }else{
+          document.title = 'App';
+        }
+      },1000);
+      */
+      //I
+      let message = 2;
+      let IntervalID;
+
+      let isdisplayingNotification;
+
+      displayNotification();
+
+      function displayNotification(){
+        if(isdisplayingNotification){
+          return;
+        }
+        isdisplayingNotification = true;
+
+        IntervalID = setInterval(function(){
+          if(document.title === 'App'){
+            document.title = `(${message}) New message`;
+          }else{
+            document.title = 'App';
+          }
+        },1000);
+      }
+
+      function stopdisplay(){
+        isdisplayingNotification = false;
+        clearInterval(IntervalID);
+        document.title = 'App';
+      }
+      
+      
+    </script>
+  </body>
+</html>
